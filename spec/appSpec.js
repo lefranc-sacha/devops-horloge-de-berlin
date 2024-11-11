@@ -24,6 +24,10 @@ describe("Horloge de Berlin - Ligne des Minutes Simples", function () {
         expect(result).toEqual("YYOO");
     });
     
+    it("devrait allumer trois lampes si les minutes sont 3", function () {
+        let result = main.simpleMinutesLine(3);
+        expect(result).toEqual("YYYO");
+    });
 
     
 });
