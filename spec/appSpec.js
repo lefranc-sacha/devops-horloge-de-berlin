@@ -15,9 +15,15 @@ describe("Horloge de Berlin - Ligne des Minutes Simples", function () {
     it("devrait allumer une lampe si les minutes sont 1", function () {
 
         let result = main.simpleMinutesLine(1);
-        
+
         expect(result).toEqual("YOOO");
     });
+
+    it("devrait allumer deux lampes si les minutes sont 2", function () {
+        let result = main.simpleMinutesLine(2);
+        expect(result).toEqual("YYOO");
+    });
+    
 
     
 });
