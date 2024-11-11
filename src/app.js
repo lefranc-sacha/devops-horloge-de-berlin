@@ -16,5 +16,9 @@ export class Main {
   }
   return lamps;
 }
+simpleHoursLine(hours) {
+    return "OOOO";
+}
+
   
 }

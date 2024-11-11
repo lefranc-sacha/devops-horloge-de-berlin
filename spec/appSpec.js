@@ -46,34 +46,35 @@ describe("Berlin Clock - Simple Minutes Line", function () {
   });
 
   describe("Five Minutes Line", function () {
-
     it("should turn off all lamps when minutes are 0", function () {
-
       const result = main.fiveMinutesLine(0);
 
       expect(result).toEqual("OOOOOOOOOOO");
     });
 
     it("should turn on one yellow lamp for 5 minutes", function () {
+      const result = main.fiveMinutesLine(5);
 
-        const result = main.fiveMinutesLine(5);
-    
-          expect(result).toEqual("YOOOOOOOOOO");
-    
+      expect(result).toEqual("YOOOOOOOOOO");
     });
 
-    it("should light up four yellow and two red lamps for 30 minutes", function() {
-        const result = main.fiveMinutesLine(30);
+    it("should light up four yellow and two red lamps for 30 minutes", function () {
+      const result = main.fiveMinutesLine(30);
 
-        expect(result).toEqual("YYRYYROOOOO");
+      expect(result).toEqual("YYRYYROOOOO");
+    });
+    it("should light up all lamps correctly for 55 minutes", function () {
+      const result = main.fiveMinutesLine(55);
 
-      });
-      it("should light up all lamps correctly for 55 minutes", function() {
-        
-        const result= main.fiveMinutesLine(55);
-        
-        expect(result).toEqual("YYRYYRYYRYY");
-      });
+      expect(result).toEqual("YYRYYRYYRYY");
+    });
+  });
 
+  describe("Berlin Clock - Simple Hours Line", function () {
+    it("should turn off all lamps for 0 hours", function () {
+      const result = main.simpleHoursLine(0);
+
+      expect(result).toEqual("OOOO");
+    });
   });
 });
