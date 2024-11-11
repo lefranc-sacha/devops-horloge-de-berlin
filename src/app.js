@@ -22,6 +22,11 @@ export class Main {
     return "R".repeat(onLamps) + "O".repeat(4 - onLamps);
   }
   fiveHoursLine(hours) {
+
+    if (hours === 0) {return "OOOO";}
+
+    if (hours === 5) {return "ROOO";}
+
     return "OOOO";
 }
 

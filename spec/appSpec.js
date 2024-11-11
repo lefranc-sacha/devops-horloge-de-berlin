@@ -119,6 +119,15 @@ describe("Berlin Clock - Simple Minutes Line", function () {
       expect(result).toEqual("OOOO");
     });
 
+    it("should have one red lamp lit for 5 hours", function() {
+
+        const result = main.fiveHoursLine(5);
+
+      expect(result).toEqual("ROOO");
+    });
+
+
+
 });
 
 });
