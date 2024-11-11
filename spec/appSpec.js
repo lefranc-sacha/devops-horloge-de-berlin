@@ -78,10 +78,18 @@ describe("Berlin Clock - Simple Minutes Line", function () {
     });
 
     it("should turn on one lamp for 1 hour", function() {
-        
+
         const result = main.simpleHoursLine(1);
 
         expect(result).toEqual("ROOO");
+      });
+
+      it("should turn on two lamps for 2 hours", function() {
+
+        const result = main.simpleHoursLine(2);
+
+        expect(result).toEqual("RROO");
+        
       });
 
   });
