@@ -61,12 +61,18 @@ describe("Berlin Clock - Simple Minutes Line", function () {
           expect(result).toEqual("YOOOOOOOOOO");
     
     });
-    
+
     it("should light up four yellow and two red lamps for 30 minutes", function() {
         const result = main.fiveMinutesLine(30);
 
         expect(result).toEqual("YYRYYROOOOO");
 
+      });
+      it("should light up all lamps correctly for 55 minutes", function() {
+        
+        const result= main.fiveMinutesLine(55);
+        
+        expect(result).toEqual("YYRYYRYYRYY");
       });
 
   });
