@@ -9,6 +9,8 @@ export class Main {
         if (minutes === 2) return "YYOO";
 
         if (minutes === 3) return "YYYO";
+
+        if (minutes === 4) return "YYYY";
         
         return "OOOO";
     }
