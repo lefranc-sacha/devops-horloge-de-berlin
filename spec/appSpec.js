@@ -48,10 +48,19 @@ describe("Berlin Clock - Simple Minutes Line", function () {
   describe("Five Minutes Line", function () {
 
     it("should turn off all lamps when minutes are 0", function () {
-        
+
       const result = main.fiveMinutesLine(0);
 
       expect(result).toEqual("OOOOOOOOOOO");
     });
+
+    it("should turn on one yellow lamp for 5 minutes", function () {
+
+        const result = main.fiveMinutesLine(5);
+    
+          expect(result).toEqual("YOOOOOOOOOO");
+    
+    });
+
   });
 });
