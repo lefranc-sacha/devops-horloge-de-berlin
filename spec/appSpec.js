@@ -96,7 +96,14 @@ describe("Berlin Clock - Simple Minutes Line", function () {
         const result = main.simpleHoursLine(3);
 
         expect(result).toEqual("RRRO");
-        
+
+      });
+
+      it("should turn on all four lamps for 4 hours", function() {
+
+        const result = main.simpleHoursLine(4);
+
+        expect(result).toEqual("RRRR");
       });
 
   });
