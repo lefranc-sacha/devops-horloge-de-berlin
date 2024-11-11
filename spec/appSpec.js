@@ -45,7 +45,6 @@ describe("Berlin Clock - Simple Minutes Line", function () {
     expect(main.simpleMinutesLine(9)).toEqual("YYYY"); // 9 % 5 = 4
   });
 
-
   describe("Five Minutes Line", function () {
     it("should turn off all lamps when minutes are 0", function () {
       const result = main.fiveMinutesLine(0);
@@ -71,7 +70,6 @@ describe("Berlin Clock - Simple Minutes Line", function () {
     });
   });
 
-
   describe("Berlin Clock - Simple Hours Line", function () {
     it("should turn off all lamps for 0 hours", function () {
       const result = main.simpleHoursLine(0);
@@ -79,76 +77,66 @@ describe("Berlin Clock - Simple Minutes Line", function () {
       expect(result).toEqual("OOOO");
     });
 
-    it("should turn on one lamp for 1 hour", function() {
-
-        const result = main.simpleHoursLine(1);
-
-        expect(result).toEqual("ROOO");
-      });
-
-      it("should turn on two lamps for 2 hours", function() {
-
-        const result = main.simpleHoursLine(2);
-
-        expect(result).toEqual("RROO");
-
-      });
-      it("should turn on three lamps for 3 hours", function() {
-
-        const result = main.simpleHoursLine(3);
-
-        expect(result).toEqual("RRRO");
-
-      });
-
-      it("should turn on all four lamps for 4 hours", function() {
-
-        const result = main.simpleHoursLine(4);
-
-        expect(result).toEqual("RRRR");
-      });
-
-  });
-
-  describe("Berlin Clock - Five Hours Line", function() {
-
-    it("should have no lamps lit for 0 hours", function() {
-
-        const result = main.fiveHoursLine(0);
-
-      expect(result).toEqual("OOOO");
-    });
-
-    it("should have one red lamp lit for 5 hours", function() {
-
-        const result = main.fiveHoursLine(5);
+    it("should turn on one lamp for 1 hour", function () {
+      const result = main.simpleHoursLine(1);
 
       expect(result).toEqual("ROOO");
     });
 
-    it("should have two red lamps lit for 10 hours", function() {
-
-        const result = main.fiveHoursLine(10);
+    it("should turn on two lamps for 2 hours", function () {
+      const result = main.simpleHoursLine(2);
 
       expect(result).toEqual("RROO");
     });
-
-    it("should have three red lamps lit for 15 hours", function() {
-
-        const result = main.fiveHoursLine(15);
+    it("should turn on three lamps for 3 hours", function () {
+      const result = main.simpleHoursLine(3);
 
       expect(result).toEqual("RRRO");
     });
 
-    it("should have all red lamps lit for 20 hours", function() {
-
-        const result = main.fiveHoursLine(20);
+    it("should turn on all four lamps for 4 hours", function () {
+      const result = main.simpleHoursLine(4);
 
       expect(result).toEqual("RRRR");
     });
+  });
 
+  describe("Berlin Clock - Five Hours Line", function () {
+    it("should have no lamps lit for 0 hours", function () {
+      const result = main.fiveHoursLine(0);
 
+      expect(result).toEqual("OOOO");
+    });
 
-});
+    it("should have one red lamp lit for 5 hours", function () {
+      const result = main.fiveHoursLine(5);
 
+      expect(result).toEqual("ROOO");
+    });
+
+    it("should have two red lamps lit for 10 hours", function () {
+      const result = main.fiveHoursLine(10);
+
+      expect(result).toEqual("RROO");
+    });
+
+    it("should have three red lamps lit for 15 hours", function () {
+      const result = main.fiveHoursLine(15);
+
+      expect(result).toEqual("RRRO");
+    });
+
+    it("should have all red lamps lit for 20 hours", function () {
+      const result = main.fiveHoursLine(20);
+
+      expect(result).toEqual("RRRR");
+    });
+  });
+
+  describe("Berlin Clock - Seconds Lamp", function () {
+    it("should be on (Y) for even seconds", function () {
+      const result = main.secondsLamp(0);  
+      expect(result).toEqual("Y");
+    });
+  });
 });
