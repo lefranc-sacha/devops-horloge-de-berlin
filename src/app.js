@@ -17,19 +17,10 @@ export class Main {
   return lamps;
 }
 simpleHoursLine(hours) {
-
-    if (hours === 0) return "OOOO";
-
-    if (hours === 1) return "ROOO";
-
-    if (hours === 2) return "RROO";
-
-    if (hours === 3) return "RRRO";
-
-    if (hours === 4) return "RRRR";
     
-    return "OOOO";
-}
+    const onLamps = hours % 5;
+    return "R".repeat(onLamps) + "O".repeat(4 - onLamps);
+  }
 
   
 }
