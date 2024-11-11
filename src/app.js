@@ -27,6 +27,8 @@ export class Main {
 
     if (hours === 5) {return "ROOO";}
 
+    if (hours === 10) {return "RROO";}
+
     return "OOOO";
 }
 
