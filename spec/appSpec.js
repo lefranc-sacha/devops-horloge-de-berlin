@@ -134,9 +134,20 @@ describe("Berlin Clock - Simple Minutes Line", function () {
   });
 
   describe("Berlin Clock - Seconds Lamp", function () {
-    it("should be on (Y) for even seconds", function () {
-      const result = main.secondsLamp(0);  
+
+    it("should be on (Y) for 0 second", function () {
+
+      const result = main.secondsLamp(0); 
+
       expect(result).toEqual("Y");
+    });
+    
+
+    it("should be off (O) for 1 second", function() {
+
+      const result = main.secondsLamp(1);
+
+      expect(result).toEqual("O");
     });
   });
 });
