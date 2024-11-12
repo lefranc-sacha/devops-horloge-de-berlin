@@ -167,5 +167,9 @@ describe("Berlin Clock - Simple Minutes Line", function () {
       const result = main.berlinClock(0, 0, 0);
       expect(result).toEqual("Y\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
     });
+    it("should display 12:10:11", function() {
+      const result = main.berlinClock(12, 10, 11);
+      expect(result).toEqual("O\nRROO\nRROO\nYYOOOOOOOOO\nOOOO");
+    });
   });
 });
