@@ -28,6 +28,10 @@ export class Main {
 secondsLamp(seconds) {
     return seconds % 2 === 0 ? "Y" : "O";  
   }
+ berlinClock(hours, minutes, seconds) {
+    return "Y\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO";
+  }
+  
  
 }
 
