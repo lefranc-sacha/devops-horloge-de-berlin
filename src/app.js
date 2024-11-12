@@ -5,30 +5,33 @@ export class Main {
   }
 
   fiveMinutesLine(minutes) {
-  const onLamps = Math.floor(minutes / 5);
-  let lamps = "";
-  for (let i = 1; i <= 11; i++) {
-    if (i <= onLamps) {
-      lamps += (i % 3 === 0) ? "R" : "Y";
-    } else {
-      lamps += "O";
+    const onLamps = Math.floor(minutes / 5);
+    let lamps = "";
+    for (let i = 1; i <= 11; i++) {
+      if (i <= onLamps) {
+        lamps += (i % 3 === 0) ? "R" : "Y";
+      } else {
+        lamps += "O";
+      }
     }
+    return lamps;
   }
-  return lamps;
-}
-    simpleHoursLine(hours) {
 
+  simpleHoursLine(hours) {
     const onLamps = hours % 5;
     return "R".repeat(onLamps) + "O".repeat(4 - onLamps);
   }
+
   fiveHoursLine(hours) {
     const onLamps = Math.floor(hours / 5);
     return "R".repeat(onLamps) + "O".repeat(4 - onLamps);
-}
-secondsLamp(seconds) {
+  }
+
+  secondsLamp(seconds) {
     return seconds % 2 === 0 ? "Y" : "O";  
   }
- berlinClock(hours, minutes, seconds) {
+
+  berlinClock(hours, minutes, seconds) {
     return [
       this.secondsLamp(seconds),
       this.fiveHoursLine(hours),
@@ -37,10 +40,12 @@ secondsLamp(seconds) {
       this.simpleMinutesLine(minutes)
     ].join("\n");
   }
-  
-  
- 
 }
 
+// Exemple d'utilisation
+const clock = new Main();
+const hours = 9;
+const minutes = 32;
+const seconds = 15;
 
-
+console.log(clock.berlinClock(hours, minutes, seconds));
