@@ -26,8 +26,7 @@ export class Main {
     return "R".repeat(onLamps) + "O".repeat(4 - onLamps);
 }
 secondsLamp(seconds) {
-    if(seconds === 1 || seconds === 3) return "O";
-    return "Y"; 
+    return seconds % 2 === 0 ? "Y" : "O";  
   }
  
 }
