@@ -141,7 +141,12 @@ describe("Berlin Clock - Simple Minutes Line", function () {
 
       expect(result).toEqual("Y");
     });
-    
+    it("should be on (Y) for 2 seconds", function () {
+
+      const result = main.secondsLamp(2); 
+
+      expect(result).toEqual("Y");
+    });
 
     it("should be off (O) for 1 second", function() {
 
