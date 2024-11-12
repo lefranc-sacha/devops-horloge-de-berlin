@@ -29,15 +29,18 @@ secondsLamp(seconds) {
     return seconds % 2 === 0 ? "Y" : "O";  
   }
  berlinClock(hours, minutes, seconds) {
-    if (hours === 0 && minutes === 0 && seconds === 0) {
-    return "Y\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO";
-    }
-    if (hours === 12 && minutes === 10 && seconds === 11) {
-    return "O\nRROO\nRROO\nYYOOOOOOOOO\nOOOO";
-    }
+    return [
+      this.secondsLamp(seconds),
+      this.fiveHoursLine(hours),
+      this.simpleHoursLine(hours),
+      this.fiveMinutesLine(minutes),
+      this.simpleMinutesLine(minutes)
+    ].join("\n");
   }
+  
   
  
 }
+
 
 
