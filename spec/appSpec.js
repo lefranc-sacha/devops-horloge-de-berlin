@@ -44,7 +44,7 @@ describe("Berlin Clock - Simple Minutes Line", function () {
 
     expect(main.simpleMinutesLine(9)).toEqual("YYYY"); // 9 % 5 = 4
   });
-
+});
   describe("Five Minutes Line", function () {
     it("should turn off all lamps when minutes are 0", function () {
       const result = main.fiveMinutesLine(0);
@@ -177,4 +177,3 @@ describe("Berlin Clock - Simple Minutes Line", function () {
     });
     
   });
-});
